@@ -25,6 +25,7 @@ public class TestWithListener {
         $(".header-search-input").click();
         $(".header-search-input").sendKeys("Kashtos90/Allure-test");
         $(".header-search-input").pressEnter();
+        $(By.linkText("Kashtos90/Allure-test")).click();
         $(new By.ByPartialLinkText("Issues")).should(Condition.exist);
     }
 
