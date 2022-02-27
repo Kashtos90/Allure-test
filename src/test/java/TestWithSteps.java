@@ -45,8 +45,8 @@ public class TestWithSteps {
 
         TestWithAnnotationStep steps = new TestWithAnnotationStep();
         steps.openMainPage();
-        steps.searchForRepository();
-        steps.openRepository();
+        steps.searchForRepository(REPOSITORY);
+        steps.openRepository(REPOSITORY);
         steps.shouldSeeIssues();
         steps.takeScreenshot();
     }
