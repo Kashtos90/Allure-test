@@ -39,4 +39,16 @@ public class TestWithSteps {
         });
     }
 
+    @Test
+    public void testAnnotatedSteps() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+
+        TestWithAnnotationStep steps = new TestWithAnnotationStep();
+        steps.openMainPage();
+        steps.searchForRepository();
+        steps.openRepository();
+        steps.shouldSeeIssues();
+        steps.takeScreenshot();
+    }
+
 }
